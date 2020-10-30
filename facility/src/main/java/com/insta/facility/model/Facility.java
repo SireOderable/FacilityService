@@ -1,19 +1,27 @@
 package com.insta.facility.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.List;
-import com.insta.facility.model.Entity;
+import com.insta.facility.Devise;
+import lombok.Data;
 
+import javax.persistence.*;
+import javax.persistence.Entity;
+import java.util.List;
+
+
+@Entity
+@Data
 public class Facility {
     @Id
-    @GeneratedValue
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private String name;
-    private String code;
+    private String facilityCode;
+    private String dealCode;
     private Long amount;
-    private String devise;
-    private List<Entity> entities;
+    private Devise devise;
+
+//    @OneToMany
+//    private List<Entity> entities;
 
 }

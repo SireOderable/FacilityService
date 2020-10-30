@@ -2,6 +2,7 @@ package com.insta.facility.model;
 
 import java.util.Date;
 
+
 public class Entity {
 
     private String name;

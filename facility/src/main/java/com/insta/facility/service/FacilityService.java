@@ -18,6 +18,9 @@ public class FacilityService {
         return facilityRepository.findAll();
     }
 
+    public List<Facility> findFacilityByDealCode(String dealCode) {
+        return facilityRepository.findFacilityByDealCode(dealCode);
+    }
 
     public Facility findByCode(String code){
         return facilityRepository.findByFacilityCode(code);

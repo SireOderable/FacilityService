@@ -17,4 +17,14 @@ public class Participant {
     private String name;
     private String calendar;
     private Long percentage;
+
+    public Participant(){}
+
+    public Participant(Long id, String facilityCode, String name, String calendar, Long percentage) {
+        this.id = id;
+        this.facilityCode = facilityCode;
+        this.name = name;
+        this.calendar = calendar;
+        this.percentage = percentage;
+    }
 }

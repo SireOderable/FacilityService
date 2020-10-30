@@ -1,5 +1,6 @@
 package com.insta.facility.rest;
 
+import com.insta.facility.dto.FacilityDto;
 import com.insta.facility.model.Facility;
 import com.insta.facility.repository.FacilityRepository;
 import com.insta.facility.service.FacilityService;
@@ -25,7 +26,13 @@ public class FacilityResource {
 
     @GetMapping("/api/v1/facilities/{facility_code}")
     Facility getFacility(@PathVariable("facility_code") String facilityCode){
+
         return facilityService.findByCode(facilityCode);
+    }
+
+    @GetMapping("/api/v1/facilities/deal")
+    FacilityDto getFacilitiesDealCode(@RequestParam("deal_code") String dealCode){
+        return new FacilityDto(dealCode, facilityService.findFacilityByDealCode(dealCode));
     }
 
     @PostMapping("/api/v1/facilities")

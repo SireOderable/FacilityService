@@ -28,7 +28,13 @@ public class ParticipantResource {
     }
 
     @PostMapping("/api/v1/participants")
-    Participant create(@RequestBody Participant participant) {
-        return participantRepository.save(participant);
+    Participant create(@RequestBody Participant participant, @RequestParam String facility_code) {
+        return participantRepository.save(
+                new Participant(null,
+                        facility_code,
+                        participant.getName(),
+                        participant.getCalendar(),
+                        participant.getPercentage())
+        );
     }
 }

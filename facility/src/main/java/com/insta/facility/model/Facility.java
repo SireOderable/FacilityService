@@ -5,7 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
-import java.util.List;
+import java.util.*;
 
 
 @Entity
@@ -20,8 +20,4 @@ public class Facility {
     private String dealCode;
     private Long amount;
     private Devise devise;
-
-//    @OneToMany
-//    private List<Entity> entities;
-
 }

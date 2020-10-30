@@ -28,7 +28,7 @@ public class FacilityResource {
         return facilityService.findByCode(facilityCode);
     }
 
-    @PostMapping("/api/v1/facilities/new")
+    @PostMapping("/api/v1/facilities")
     Facility create(@RequestBody Facility facility) {
         return facilityRepository.save(facility);
     }

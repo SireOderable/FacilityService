@@ -1,15 +1,12 @@
 package com.insta.facility.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Data
 @Entity
-@Builder
 public class Participant {
 
     @Id
@@ -20,8 +17,4 @@ public class Participant {
     private String name;
     private String calendar;
     private Long percentage;
-
-
-
-
 }
